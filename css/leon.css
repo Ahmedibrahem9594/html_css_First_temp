@@ -1,3 +1,7 @@
+ :root {
+    --main-color :#10cab7;
+ }
+
  /* Start Global Rules */
 * {
     -webkit-box-sizing:border-box;
@@ -102,6 +106,7 @@ body {
 
 .header .links:hover ul {
     display: block;
+    z-index: 1;
 }
 
 .header .links ul::before {
@@ -131,4 +136,32 @@ body {
    border-bottom: 1px solid #ddd;
 }
 
+.landing {
+    background-image: url(../images/mountain.jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+   
+}
 
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,50%);
+    text-align: center;
+    width: 420px;
+    max-width: 100%;
+}
+
+.landing .intro-text h1 {
+    margin: 0px;
+    color: var(--main-color);
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.landing .intro-text p {
+    font-size: 19px;
+    line-height: 28px;
+}
