@@ -1,6 +1,7 @@
  :root {
     --main-color :#10cab7;
     --secondery-color : #2c4755;
+    --section-padding: 60px;
  }
 
  /* Start Global Rules */
@@ -192,8 +193,8 @@ body {
 }
 
 .Features {
-    padding-top:60px;
-    padding-bottom:60px;
+    padding-top:var(--section-padding);
+    padding-bottom:var(--section-padding);
     background-color: #f2f2f2;
 }
 
@@ -226,8 +227,9 @@ body {
 }
 /* Start Services  */
 .Services {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: #f2f2f2;
 }
 .Services .container .services-content {
     display: grid;
@@ -279,7 +281,6 @@ body {
     right: -75px;
     top: -50px;
     position: absolute;
-    z-index: -1;
 }
 @media (max-width:1200px) {
     .Services .container .services-content .col .image{
@@ -288,3 +289,35 @@ body {
 }
 
 /* End Services  */
+
+/* Start Protofolio */
+.Protofolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: #f2f2f2;
+}
+
+.Protofolio .container .Protofolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 40px;
+    margin-top: 80px;
+}
+
+.Protofolio .container .Protofolio-content img {
+    max-width: 100%;
+}
+
+.Protofolio .container .Protofolio-content .info {
+    padding: 20px;
+}
+
+.Protofolio .container .Protofolio-content .info h2{
+    margin: 0;
+}
+.Protofolio .container .Protofolio-content .info p{
+    line-height: 1.8;
+    color: #797979;
+}
+
+/* End Protofolio */
