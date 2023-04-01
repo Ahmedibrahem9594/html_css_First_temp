@@ -1,5 +1,6 @@
  :root {
     --main-color :#10cab7;
+    --secondery-color : #2c4755;
  }
 
  /* Start Global Rules */
@@ -42,6 +43,29 @@ body {
         width: 1170px;
     }
  }
+/* Start components */
+.special-heading {
+    color: #ededed;
+    font-size: 150px;
+    text-align: center;
+    letter-spacing: -10px;
+    margin: 0;
+}
+.special-heading + P {
+    font-size: 20px;
+    margin-top: -40px;
+    text-align: center;
+    color: #797979;
+}
+@media (max-width:779px) {
+    .special-heading { 
+        font-size: 100px;
+    }
+    .special-heading + P {
+        margin-top: -30px;
+    }
+}
+/* End components */
 
  /* End Global Rules */
 
@@ -200,3 +224,67 @@ body {
     line-height: 1.7;
     color: #777;
 }
+/* Start Services  */
+.Services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.Services .container .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 40px;
+    margin-top: 80px;
+}
+.Services .container .services-content .col .srv {
+   display: flex;
+   margin-bottom: 40px;
+}
+@media (max-width:767px) {
+    .Services .container .services-content .col .srv {
+        flex-direction: column;
+        text-align: center;
+     }
+}
+.Services .container .services-content .col .srv i {
+    color: var(--main-color);
+    flex-basis: 60px;
+    font-size: 30px;
+ }
+.Services .container .services-content .col .text {
+    flex: 1;
+ }
+ .Services .container .services-content .col .text h2{
+   margin: 0;
+   font-weight: 600;
+ }
+ .Services .container .services-content .col .text p{
+   line-height: 1.8;
+   color: #797979 ;
+ }
+
+.Services .container .services-content .col .image{
+   text-align: center;
+   position: relative;
+}
+.Services .container .services-content .col .image img{
+    width: 400px;
+    filter:grayscale(100%);
+    border-radius: 5%;
+}
+.Services .container .services-content .col .image::before{
+    content: "";
+    background-color: var(--secondery-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    right: -75px;
+    top: -50px;
+    position: absolute;
+    z-index: -1;
+}
+@media (max-width:1200px) {
+    .Services .container .services-content .col .image{
+        display: none;
+     }
+}
+
+/* End Services  */
