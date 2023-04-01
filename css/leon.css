@@ -464,3 +464,7 @@ body {
     color: #10cab7;
     font-weight: 800;
 }
+
+html {
+    scroll-behavior: smooth;
+}
